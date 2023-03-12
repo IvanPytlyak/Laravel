@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\Api\OrderController;
+use App\Http\Controllers\Api\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,8 +24,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 
-Route::get('/user', [UserController::class, 'index']);
-Route::get('/users/{id}', [UserController::class, 'view'])->where('id', '[0-9]+');
+
+Route::get('/users/{id}/view', [UserController::class, 'view'])->where('id', '[0-9]+');
+Route::get('/users/{id}/index', [UserController::class, 'index'])->where('id', '[0-9]+');
 
 Route::get('/users/{id}/orders/{order_id}/comments/{comment_id}', [UserController::class, 'viewComment'])
     ->where([
@@ -31,3 +34,26 @@ Route::get('/users/{id}/orders/{order_id}/comments/{comment_id}', [UserControlle
         'order_id' => '\d+',
         'comment_id' => '\d+'
     ]);
+
+
+Route::get('/users/{id}/orders/', [UserController::class, 'vieworder'])
+    ->where(
+        [
+            'id' => '\d+',
+        ]
+    );
+
+
+Route::get('/orders/{id}', [OrderController::class, 'vieworder'])
+    ->where(
+        [
+            'id' => '\d+',
+        ]
+    );
+
+Route::get('/comments/{id}', [CommentController::class, 'viewcomment'])
+    ->where(
+        [
+            'id' => '\d+',
+        ]
+    );

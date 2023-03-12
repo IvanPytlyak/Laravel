@@ -95,19 +95,19 @@ return [
 
 
 
-        'mydb' => [ // моя
-            'driver' => 'mysql',
-            'host' => env('DATABASE_HOST', 'localhost'),
-            'port' => env('DATABASE_PORT', '3306'),
-            'database' => env('DATABASE_NAME', 'Laravel'),
-            'username' => env('DATABASE_USER', 'admin_laravel'),
-            'password' => env('DATABASE_PASSWORD', '123'),
-            'charset' => 'utf8mb4',
-            'collation' => 'utf8mb4_unicode_ci',
-            'prefix' => '',
-            'strict' => true,
-            'engine' => null,
-        ],
+        // 'mydb' => [ // моя
+        //     'driver' => 'mysql',
+        //     'host' => env('DATABASE_HOST', 'localhost'),
+        //     'port' => env('DATABASE_PORT', '3306'),
+        //     'database' => env('DATABASE_NAME', 'Laravel'),
+        //     'username' => env('DATABASE_USER', 'admin_laravel'),
+        //     'password' => env('DATABASE_PASSWORD', '123'),
+        //     'charset' => 'utf8mb4',
+        //     'collation' => 'utf8mb4_unicode_ci',
+        //     'prefix' => '',
+        //     'strict' => true,
+        //     'engine' => null,
+        // ],
 
     ],
 

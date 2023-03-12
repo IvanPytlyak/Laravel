@@ -43,4 +43,4 @@ Route::get('/users/{id}/orders/{order_id}/comments/{comment_id}', function ($id,
     } else {
         return "Такой заказ не существует";
     }
-})->where('id', '\d+')->where('order_id', '\d+')->where('comment_id', '\d+');
+})->where('id', '\d+')->where('order_id', '\d+')->where('comment_id', '\d+'); // переделать
